@@ -8,7 +8,7 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 ## Criar uma conta na AWS
 
 1. Use esse link para criar sua conta e incluir um método de pagamento
-[aws.amazon.com/free](https://wwww.aws.amazon.com/free)
+[aws.amazon.com/free](https://www.aws.amazon.com/free)
 <a href="[https://www.google.com/](https://wwww.aws.amazon.com/free)" target="_blank">aws.amazon.com/free</a>
 
 2. Ao logar na conta da Amazon clique no nome do seu usuário no canto superior direito e depois em configurações (Settings)
