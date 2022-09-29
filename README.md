@@ -9,7 +9,6 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 
 1. Use esse link para criar sua conta e incluir um método de pagamento
 [aws.amazon.com/free](https://www.aws.amazon.com/free)
-<a href="[https://www.google.com/](https://wwww.aws.amazon.com/free)" target="_blank">aws.amazon.com/free</a>
 
 2. Ao logar na conta da Amazon clique no nome do seu usuário no canto superior direito e depois em configurações (Settings)
 3. Em Localização e região padrão (Localization and default Region) clique em editar e defina *Language: English (US)* e *Default Region: US East (N. Virginia) us-east-1*
