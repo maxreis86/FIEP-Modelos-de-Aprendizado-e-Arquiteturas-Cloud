@@ -8,7 +8,7 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 ## Criar uma conta na AWS
 
 1. Use esse link para criar sua conta e incluir um método de pagamento
-[aws.amazon.com/free](aws.amazon.com/free)
+[aws.amazon.com/free](wwww.aws.amazon.com/free)
 2. Ao logar na conta da Amazon clique no nome do seu usuário no canto superior direito e depois em configurações (Settings)
 3. Em Localização e região padrão (Localization and default Region) clique em editar e defina *Language: English (US)* e *Default Region: US East (N. Virginia) us-east-1*
 
