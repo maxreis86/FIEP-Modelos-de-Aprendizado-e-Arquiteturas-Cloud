@@ -1,0 +1,16 @@
+*.zip
+*.mp4
+*.pdf
+*.parquet
+*.jar
+*.serverless
+*.pack
+*.so
+*.sav
+*.xlsx
+*/output_model/*
+*/.ipynb_checkpoints/*
+*/node_modules/*
+*/.serverless/*
+*.ipynb_checkpoints*
+!*h2o-genmodel.jar
