@@ -1,13 +1,10 @@
 service: recommendation-svc
-
 frameworkVersion: ">=2.24.0"
-
 provider:
   name: aws
-  runtime: python3.7
+  runtime: python3.9
   stage: dev
-  region: us-east-1
-  
+  region: us-east-1  
 functions:
   random-recommendation:
     handler: handler.lambda_handler
@@ -22,6 +19,5 @@ functions:
             parameters:
               querystrings:
                 user_id: true
-
-# plugins:
-#   - serverless-python-requirements
+plugins:
+  - serverless-python-requirements
