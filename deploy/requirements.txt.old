@@ -1,2 +1,5 @@
-random
-json
+pandas==1.3.5
+h2o==3.36.1.1
+DateTime==4.4
+queues==0.6.3
+thread6==0.2.0
