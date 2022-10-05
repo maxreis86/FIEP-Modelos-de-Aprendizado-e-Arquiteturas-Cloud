@@ -1,27 +1,69 @@
-service: recommendation-svc
+# This file is the main config file for your service.
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
 
-frameworkVersion: ">=2.24.0"
+service: model-prop-apply-prospects
 
 provider:
   name: aws
   runtime: python3.7
-  stage: dev
+  stage: prod
   region: us-east-1
-  
+  ecr:
+    # In this section you can define images that will be built locally and uploaded to ECR
+    images:
+      appimage:
+        path: ./
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:BatchGetItem
+            - dynamodb:DeleteItem
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:UpdateItem
+          Resource: '*'
+          
+# you can add packaging information here
+package:
+#  include:
+#    - include-me.py
+#    - include-me-dir/**
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .ipynb_checkpoints/**
+    - __pycache__/**
+    - deploy.sh
+
 functions:
-  random-recommendation:
-    handler: handler.lambda_handler
-    memorySize: 1024
+  predict-apply:
+    image:
+      name: appimage
+    #handler: handler.lambda_handler # Alteração para o nome definido no handler.py
+    memorySize: 10240
     timeout: 30
     events:
       - http:
-          path: get-recommendation
+          path: get-predict
           method: get
           cors: true
           request:
             parameters:
               querystrings:
-                user_id: true
+                jobId: true
+                linkedinUsername: true
 
-# plugins:
-#   - serverless-python-requirements
+plugins:
+  - serverless-python-requirements
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    zip: true
