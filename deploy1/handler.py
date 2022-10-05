@@ -15,6 +15,7 @@ def lambda_handler(event, context):
     ,'d37176c6-a94c-496b-9c42-db3c466722f6'
     ,'9d1ce001-9429-4501-8584-581b3210211e'
     ,'a7815b8d-29a5-479c-bb0e-7179e419dc92'
+    ,'a7815b8d-29a5-479c-bb0e-7179e419dc92'
     ]
     
     body = {
