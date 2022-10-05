@@ -14,3 +14,4 @@
 */.serverless/*
 *.ipynb_checkpoints*
 !*h2o-genmodel.jar
+!GBM_grid_1_AutoML_1_20220602_224459_model_101.zip
