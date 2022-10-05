@@ -1,0 +1,34 @@
+{
+    "resource":"/get-predict",
+    "path":"/get-predict",
+    "httpMethod":"GET",
+    "headers":"null",
+    "multiValueHeaders":"null",
+    "queryStringParameters":{"jobId":"1198",
+                             "linkedinUsername":"maxuel-reis-1b343621"},
+    "multiValueQueryStringParameters":{"jobId":["1198"],
+                                       "linkedinUsername":["maxuel-reis-1b343621"]},
+    "pathParameters":"null",
+    "stageVariables":"null",
+    "requestContext":{"resourceId":"wiqrrw",
+                      "resourcePath":"/get-predict",
+                      "httpMethod":"GET",
+                      "extendedRequestId":
+                      "QiOUfE7-IAMFg0w=",
+                      "requestTime":"13/Apr/2022:19:54:42 +0000",
+                      "path":"/get-predict",
+                      "accountId":"245799943033",
+                      "protocol":"HTTP/1.1",
+                      "stage":"test-invoke-stage",
+                      "domainPrefix":"testPrefix",
+                      "requestTimeEpoch":1649879682955,
+                      "requestId":"8f41556e-b667-4d81-b645-be39e634585e",
+                      "identity":{"cognitoIdentityPoolId":"null",
+                                  "cognitoIdentityId":"null",
+                                  "apiKey":"test-invoke-api-key",
+                                  "principalOrgId":"null",
+                                  "cognitoAuthenticationType":"null",
+                                  "userArn":"arn:aws:sts::245799943033:assumed-role/AWSReservedSSO_PowerUserAccess_889bae6f5b6d6472/max.reis@byinte"
+                                 }
+                     }
+}
