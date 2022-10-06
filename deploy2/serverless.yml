@@ -4,7 +4,7 @@
 #
 # Happy Coding!
 
-service: aula-deploy-modelo
+service: model-prop-apply-prospects
 
 provider:
   name: aws
@@ -22,13 +22,20 @@ provider:
       statements:
         - Effect: Allow
           Action:
-            - glue:*
-            - athena:*
-            - dynamodb:*
+            - dynamodb:BatchGetItem
+            - dynamodb:DeleteItem
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:UpdateItem
           Resource: '*'
           
 # you can add packaging information here
 package:
+#  include:
+#    - include-me.py
+#    - include-me-dir/**
   exclude:
     - node_modules/**
     - .gitignore
@@ -37,10 +44,11 @@ package:
     - deploy.sh
 
 functions:
-  predict-survive:
+  predict-apply:
     image:
-      name: appimage    
-    memorySize: 3008
+      name: appimage
+    #handler: handler.lambda_handler # Alteração para o nome definido no handler.py
+    memorySize: 10240
     timeout: 30
     events:
       - http:
@@ -50,7 +58,9 @@ functions:
           request:
             parameters:
               querystrings:
-                passenger_id: true
+                jobId: true
+                linkedinUsername: true
+
 plugins:
   - serverless-python-requirements
 custom:
