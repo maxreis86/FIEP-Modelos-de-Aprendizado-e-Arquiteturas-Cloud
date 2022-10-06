@@ -15,3 +15,4 @@
 *.ipynb_checkpoints*
 !*h2o-genmodel.jar
 !GBM_grid_1_AutoML_1_20220602_224459_model_101.zip
+!StackedEnsemble_BestOfFamily_4_AutoML_1_20221006_02202.zip
