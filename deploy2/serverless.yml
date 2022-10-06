@@ -48,7 +48,7 @@ functions:
     image:
       name: appimage
     #handler: handler.lambda_handler # Alteração para o nome definido no handler.py
-    memorySize: 10240
+    memorySize: 3008
     timeout: 30
     events:
       - http:
