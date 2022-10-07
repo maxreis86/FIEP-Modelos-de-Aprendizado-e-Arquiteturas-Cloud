@@ -96,4 +96,24 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 38. No canto superior direito clique em *Unknown*
 39. Em Instance Type selecione: ml.t3.medium
 40. Clique em *Save and continue*
-41. Executar todos os códigos do notebook e seguir as instruções nos arquivos 1_Data_Prep.ipynb, 2_Fast_Machine_Learning.ipynb e 3_Explaining_Model.ipynb
+41. Executar todos os códigos do notebook e seguir as instruções nos arquivos 1_Data_Prep.ipynb, 2_Fast_Machine_Learning.ipynb, 3_Explaining_Model.ipynb e 4_Deploy_Model.ipynb
+
+## AWS Cloudformation: Deploy usando Serverless 
+1. Colar o conteúdo da função def lambda_handler no arquivo handler.py
+2. Remover o prefix ./output_model/models/best/ que aparece duas vezes no código handler.py
+3. Confirmar se todas as bibliotecas pandas, awswrangler e h2o foram incluídas no arquivo requirements.txt (OBS: Sempre inclua a versão da biblioteca para evitar que seu código pare de funcionar quando uma nova versão for publicada)
+4. Altere o nome "StackedEnsemble_BestOfFamily_4_AutoML_1_20221007_182042.zip" para o nome do melhor modelo no arquivo Dockerfile
+5. Conferir todas as configurações do arquivo serverless.yml, principalmente o parâmetro "querystrings" onde você deve informar todos os campos que serão obrigatórios na chamada da API
+6. Clique em File > New > Terminal e digite o comandos comandos abaixo:
+7. git add *
+8. git commit -m "deploy do melhor modelo"
+9. git config --global --add --bool push.autoSetupRemote true
+9. git push
+10. Informe seu usário do Github
+11. Informe seu token pessoal. Se você não tem um token siga esse [passo-a-passo]( https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+12. Vamos recriar uma instância no Cloud9. Para isso repita os passos 1 ao 15 na sessão [Cloud9](https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud#amazon-cloud9)
+13. Agora execute os comandos abaixo
+14. cd ..
+15. cd deploy
+16. npm install -g serverless
+17. bash deploy.sh
