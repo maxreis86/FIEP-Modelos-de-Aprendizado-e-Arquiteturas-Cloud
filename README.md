@@ -98,7 +98,7 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 40. Clique em *Save and continue*
 41. Executar todos os códigos do notebook e seguir as instruções nos arquivos 1_Data_Prep.ipynb, 2_Fast_Machine_Learning.ipynb, 3_Explaining_Model.ipynb e 4_Deploy_Model.ipynb
 
-## AWS Cloudformation: Deploy usando Serverless 
+## AWS Cloudformation: Deploy usando Serverless
 1. Colar o conteúdo da função def lambda_handler no arquivo handler.py
 2. Remover o prefix ./output_model/models/best/ que aparece duas vezes no código handler.py
 3. Confirmar se todas as bibliotecas pandas, awswrangler e h2o foram incluídas no arquivo requirements.txt (OBS: Sempre inclua a versão da biblioteca para evitar que seu código pare de funcionar quando uma nova versão for publicada)
