@@ -14,3 +14,4 @@
 */.serverless/*
 *.ipynb_checkpoints*
 !*h2o-genmodel.jar
+!/output_model/models/best/*.zip
