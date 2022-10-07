@@ -46,14 +46,15 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 12. Clique em **Next Step** e **Create environment**
 13. Clonar o repositório do git digitando a linha de comando abaixo no terminal  do Cloud9 (ec2-user:~/environment $): *git clone https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud.git*
 14. Entrar na pasta da aula usando o comando: *cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud/sagemaker-custom-image*
-15. Precisamos aumentar o espaço em disco dessa máquina virtual usando o comando: *bash resize.sh*
-16. Executar os comandos 1 ao 4 conforme orientação da página *Push commands for aula-deploy-modelos* visto anteriormente:
-17. *aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 702113447940.dkr.ecr.us-east-1.amazonaws.com*
-18. *docker build -t aula-deploy-modelos .*
-19. *docker tag aula-deploy-modelos:latest 702113447940.dkr.ecr.us-east-1.amazonaws.com/aula-deploy-modelos:latest*
-20. *docker push 702113447940.dkr.ecr.us-east-1.amazonaws.com/aula-deploy-modelos:latest*
-21. Após criar a imagem usando Docker, desligue a instância do Cloud9 executando o comando: sudo shutdown
-22. Feche o Cloud9
+15. Criar uma branch com seu nome e sobrenome sem acento ou espaco usando: git checkout -b nome_sobrenome
+16. Precisamos aumentar o espaço em disco dessa máquina virtual usando o comando: *bash resize.sh*
+17. Executar os comandos 1 ao 4 conforme orientação da página *Push commands for aula-deploy-modelos* visto anteriormente:
+18. *aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 702113447940.dkr.ecr.us-east-1.amazonaws.com*
+19. *docker build -t aula-deploy-modelos .*
+20. *docker tag aula-deploy-modelos:latest 702113447940.dkr.ecr.us-east-1.amazonaws.com/aula-deploy-modelos:latest*
+21. *docker push 702113447940.dkr.ecr.us-east-1.amazonaws.com/aula-deploy-modelos:latest*
+22. Após criar a imagem usando Docker, desligue a instância do Cloud9 executando o comando: sudo shutdown
+23. Feche o Cloud9
 
 ## Amazon SageMaker
 1. Em *Services*, no canto superior esquerdo procure por *Amazon SageMaker*
@@ -111,7 +112,7 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 9. git push
 10. Informe seu usário do Github
 11. Informe seu token pessoal. Se você não tem um token siga esse [passo-a-passo]( https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-12. Vamos recriar uma instância no Cloud9. Para isso repita os passos 1 ao 15 na sessão [Cloud9](https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud#amazon-cloud9)
+12. Vamos recriar uma instância no Cloud9. Para isso repita os passos somente do 1 ao 16 na sessão [Cloud9](https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud#amazon-cloud9)
 13. Agora execute os comandos abaixo
 14. cd ..
 15. cd deploy
