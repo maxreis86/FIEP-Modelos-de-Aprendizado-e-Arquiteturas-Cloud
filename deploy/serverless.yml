@@ -25,6 +25,7 @@ provider:
             - glue:*
             - athena:*
             - dynamodb:*
+            - s3:*
           Resource: '*'
           
 # you can add packaging information here

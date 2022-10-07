@@ -1,2 +1,3 @@
 pandas==1.3.5
 h2o==3.36.1.1
+awswrangler==2.17.0
