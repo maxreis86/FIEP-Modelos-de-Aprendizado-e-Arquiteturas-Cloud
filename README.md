@@ -106,8 +106,9 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 4. Altere o nome "StackedEnsemble_BestOfFamily_4_AutoML_1_20221007_182042.zip" para o nome do melhor modelo no arquivo Dockerfile
 5. Conferir todas as configurações do arquivo serverless.yml, principalmente o parâmetro "querystrings" onde você deve informar todos os campos que serão obrigatórios na chamada da API
 6. Clique em File > New > Terminal e digite o comandos comandos abaixo:
-7. git add *
-8. git commit -m "deploy do melhor modelo"
+7. cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
+8. git add *
+9. git commit -m "deploy do melhor modelo"
 9. git config --global --add --bool push.autoSetupRemote true
 9. git push
 10. Informe seu usário do Github
