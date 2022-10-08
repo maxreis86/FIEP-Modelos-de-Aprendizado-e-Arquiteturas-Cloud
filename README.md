@@ -107,20 +107,25 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 5. Conferir todas as configurações do arquivo serverless.yml, principalmente o parâmetro "querystrings" onde você deve informar todos os campos que serão obrigatórios na chamada da API
 6. Clique em File > New > Terminal e digite o comandos comandos abaixo:
 7. cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
-8. git add *
-9. git commit -m "deploy do melhor modelo"
-9. git config --global --add --bool push.autoSetupRemote true
-9. git push
-10. Informe seu usário do Github
-11. Informe seu token pessoal. Se você não tem um token siga esse [passo-a-passo]( https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-12. Vamos recriar uma instância no Cloud9. Para isso repita os passos somente do 1 ao 12 na sessão [Cloud9](https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud#amazon-cloud9)
-13. Agora execute os comandos abaixo
-14. Clonar o repositório do git digitando a linha de comando abaixo no terminal  do Cloud9, mas antes mudo nome_sobrenome e coloque seus dados (ec2-user:~/environment $): *git clone --branch nome_sobrenome https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud.git*
-15. Entrar na pasta da aula usando o comando: *cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud/sagemaker-custom-image*
-16. Precisamos aumentar o espaço em disco dessa máquina virtual usando o comando: *bash resize.sh*
-17. cd ..
-18. cd deploy
-19. npm install -g serverless
-20. bash deploy.sh
-21. Copie o endereço do endpoint e cole no arquivo 5_Test_Endpoint.ipynb substituindo o endereço de exemplo
-22. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
+8. cp ./output_model/models/best/*.zip  ./deploy/
+9. cp ./output_model/models/best/h2o-genmodel.jar  ./deploy/h2o-genmodel.jar
+10. git rm -rf --cached .
+11. git add .
+12. git commit -m "deploy do melhor modelo"
+13. git config --global --add --bool push.autoSetupRemote true
+14. git push
+15. Informe seu usário do Github
+16. Informe seu token pessoal. Se você não tem um token siga esse [passo-a-passo]( https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+17. Se aparecer uma mensagem informando que você não tem acesso, envie uma mensagem para o professor informando seu usuário do github, pois é necessário liberar o seu acesso para gravar nesse repositório 
+18. Vamos recriar uma instância no Cloud9. Para isso repita os passos somente do 1 ao 12 na sessão [Cloud9](https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud#amazon-cloud9)
+19. Agora execute os comandos abaixo
+20. Clonar o repositório do git digitando a linha de comando abaixo no terminal  do Cloud9, mas antes mude nome_sobrenome e coloque seu nome (ec2-user:~/environment $): *git clone --branch nome_sobrenome https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud.git*
+21. Entrar na pasta da aula usando o comando: *cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud/sagemaker-custom-image*
+22. Precisamos aumentar o espaço em disco dessa máquina virtual usando o comando: *bash resize.sh*
+23. cd ..
+24. cd deploy
+25. npm install -g serverless
+26. bash deploy.sh
+27. Copie o endereço do endpoint a partir do http e cole no arquivo 5_Test_Endpoint.ipynb substituindo o endereço de exemplo
+28. Execute todos os passos do código 5_Test_Endpoint.ipynb
+29. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
