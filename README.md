@@ -102,8 +102,8 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 ## AWS Cloudformation: Deploy usando Serverless
 1. Colar o conteúdo da função def lambda_handler no arquivo handler.py
 2. Remover o prefix ./output_model/models/best/ que aparece duas vezes no código handler.py e deixar somente o nome do arquivo sem o caminho completo
-3. Confirmar se todas as bibliotecas pandas, awswrangler e h2o foram incluídas no arquivo requirements.txt (OBS: Sempre inclua a versão da biblioteca para evitar que seu código pare de funcionar quando uma nova versão for publicada)
-4. Altere o nome "StackedEnsemble_BestOfFamily_4_AutoML_1_20221007_182042.zip" para o nome do melhor modelo no arquivo Dockerfile
+3. Confirmar se as bibliotecas pandas, awswrangler e h2o foram incluídas no arquivo requirements.txt (OBS: Sempre inclua a versão da biblioteca para evitar que seu código pare de funcionar quando uma nova versão for publicada)
+4. Altere o nome "StackedEnsemble_BestOfFamily_4_AutoML_1_20221011_230015.zip" para o nome do melhor modelo no arquivo **Dockerfile**
 5. Conferir todas as configurações do arquivo serverless.yml, principalmente o parâmetro "querystrings" onde você deve informar todos os campos que serão obrigatórios na chamada da API
 6. Clique em File > New > Terminal e digite o comandos comandos abaixo:
 7. cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
@@ -129,3 +129,6 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 27. Copie o endereço do endpoint a partir do http e cole no arquivo 5_Test_Endpoint.ipynb substituindo o endereço de exemplo
 28. Execute todos os passos do código 5_Test_Endpoint.ipynb
 29. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
+
+
+## AWS Amplify
