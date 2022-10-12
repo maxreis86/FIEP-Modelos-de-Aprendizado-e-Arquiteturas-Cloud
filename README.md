@@ -129,6 +129,22 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 27. Copie o endereço do endpoint a partir do http e cole no arquivo 5_Test_Endpoint.ipynb substituindo o endereço de exemplo
 28. Execute todos os passos do código 5_Test_Endpoint.ipynb
 29. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
+30. Na pasta ./web_app/js/ abra o arquivo "app.js"
+31. 
 
 
 ## AWS Amplify
+1. Abre o repositório no Github: https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
+2. No canto superior direito, clique em **Fork**
+3. Em "Owner" deixei o seu username e em Repository name deixe o mesmo nome que está.
+4. Clique em **Create Fork**
+5. Volte para a AWS e em *Services*, no canto superior esquerdo procure por *AWS Amplify*
+6. Procure por "Amplify Hosting" no canto inferior direito e clique em Get started
+7. Escolha a opção Github e clique em Continue
+8. Se aparecer a tela "Sign in to GitHub to continue to AWS Amplify (us-east-1)" entre com seu usuário e senha do Github
+9. Clique em "Authorize AWS Amplify (us-east-1)"
+10. Na tela "Install & Authorize AWS Amplify (us-east-1)". Selecione "Only select repositories" e escolhe o repositório "FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud"
+11. Clique em "Install & Autohrize"
+12. Na opção "Recently updated repositories" escolha o repositório "FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud"
+13. Marque a opção "Connecting a monorepo? Pick a folder"
+14. Escolha a pasta
