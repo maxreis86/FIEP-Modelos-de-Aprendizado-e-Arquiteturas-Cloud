@@ -130,13 +130,13 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 28. Execute todos os passos do código 5_Test_Endpoint.ipynb
 29. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
 30. Na pasta ./web_app/js/ abra o arquivo "app.js"
-31. 
-
+31. Alterei a constante predictEndpoint e coloque o mesmo endpoint testado no arquivo 5_Test_Endpoint.ipynb no lugar do endereço atual 
 
 ## AWS Amplify
 1. Abre o repositório no Github: https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
 2. No canto superior direito, clique em **Fork**
 3. Em "Owner" deixei o seu username e em Repository name deixe o mesmo nome que está.
+4. *Desmarque* a opção "Copy the main branch only"
 4. Clique em **Create Fork**
 5. Volte para a AWS e em *Services*, no canto superior esquerdo procure por *AWS Amplify*
 6. Procure por "Amplify Hosting" no canto inferior direito e clique em Get started
@@ -147,4 +147,4 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 11. Clique em "Install & Autohrize"
 12. Na opção "Recently updated repositories" escolha o repositório "FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud"
 13. Marque a opção "Connecting a monorepo? Pick a folder"
-14. Escolha a pasta
+14. Escolha a pasta titanic_web_app
