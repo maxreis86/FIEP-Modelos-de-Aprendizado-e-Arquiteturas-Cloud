@@ -12,7 +12,9 @@ function sendPredictionRequest() {
     
     $('#ProbLoader').show();
     $('#RatingLoader').show();
-    $('#SuggestionLoader').show();
+    $('#PredictLoader').show();
+    
+    alert('oi');
         
     $.ajax(
         {
@@ -20,19 +22,27 @@ function sendPredictionRequest() {
            url: predictEndpoint,
            data: '&passenger_id=' + $('#passenger_id').val(),
            // data: '&passenger_id=' + $('#passenger_id').val()  + '&embarked=' + $('#embarked').val(),
-           success: function(data){                    
-                $('#Prob').val(`${data.probability * 100}`.substring(0, 5)+'%');
-                $('#Rating').val(data.rating);
-                $('#Predict').val(data.predict);
+           success: function(data){
                
-                $('#ProbLoader').hide();
-                $('#RatingLoader').hide();
-                $('#SuggestionLoader').hide();
-               
-                $('#ProbGroup').show();
-                $('#RatingGroup').show();
-                $('#PredictGroup').show();
-               
+               if (data.message == 'Prediction executed successfully!') {
+                    $('#Prob').val(`${data.probability * 100}`.substring(0, 5)+'%');
+                    $('#Rating').val(data.rating);
+                    $('#Predict').val(data.message);
+
+                    $('#ProbLoader').hide();
+                    $('#RatingLoader').hide();
+                    $('#PredictLoader').hide();
+
+                    $('#ProbGroup').show();
+                    $('#RatingGroup').show();
+                    $('#PredictGroup').show();
+               }
+               else {
+                   $('#Prob').val('');
+                   $('#Rating').val('');
+                   $('#Predict').val('');
+                   alert('Passenger_id not found');
+               }
            },
             error: function(error) {
                 alert('Passenger_id not found');
@@ -48,6 +58,7 @@ function sendPredictionRequest() {
             }
         }
      );
+};
 
 $('#btnPredictProb').click(sendPredictionRequest);
 
