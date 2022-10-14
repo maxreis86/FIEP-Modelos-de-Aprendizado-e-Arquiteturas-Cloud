@@ -6,7 +6,7 @@ def lambda_handler(event, context):
     import json
     
     #Best Model ID:
-    BestModelId='.StackedEnsemble_BestOfFamily_4_AutoML_2_20221010_193539.zip'
+    BestModelId='StackedEnsemble_BestOfFamily_4_AutoML_2_20221010_193539.zip'
     
     #Keep the ratings ranges updated
     def ratings(p1):
