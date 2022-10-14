@@ -153,5 +153,11 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 10. Na tela "Install & Authorize AWS Amplify (us-east-1)". Selecione "Only select repositories" e escolhe o repositório "FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud"
 11. Clique em "Install & Autohrize"
 12. Na opção "Recently updated repositories" escolha o repositório "FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud"
-13. Marque a opção "Connecting a monorepo? Pick a folder"
-14. Escolha a pasta titanic_web_app
+13. Na opção "Branch: Select a branch from your repository" escolha a branch com seu nome (nome_sobrenome)
+14. Marque a opção "Connecting a monorepo? Pick a folder"
+15. Digite no nome da pasta: titanic_web_app
+16. Clique em Next
+17. No campo "App name" preencha com "titanic_web_app"
+17. Marque a opção: "Allow AWS Amplify to automatically deploy all files hosted in your project root directory"
+18. Clique em Next
+19. Clique em "Save and deploy"
