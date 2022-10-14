@@ -168,3 +168,7 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 1. Seguir as instruções do arquivos 6_Deploy_Model_DynamoDB.ipynb
 2. Depois de executar o código no arquivo 6_Deploy_Model_DynamoDB.ipynb, você vai ter que refazer o deploy do modelo. Para isso você deve seguir novamente as instruções no step "AWS Cloudformation: Deploy usando Serverless", mas tenha atenção porque algumas coisas poidem ser diferentes, pois agora você precisa fazer o deploy do novo código gerado no arquivo 6 ao inves do arquivo 5.
 3. As alterações principais que você precisa fazer serão no arquivo handler.py
+4. Após repetir o deploy faça o teste do endpoint novamente no arquivo 5_Test_Endpoint.ipynb e veja se ficou mais rápido
+5. Se apresentar o erro tente descobrir o problema olhando o log da Lambda
+6. Após analisar o erro tente executar novamente tirando o comentário do código "Definição dos inputs para a versão com o DynamoDB"
+7. Parabéns você concluiu mais um deploy com sucesso \o/
