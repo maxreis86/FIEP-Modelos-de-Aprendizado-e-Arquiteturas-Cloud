@@ -129,13 +129,20 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 27. Copie o endereço do endpoint a partir do http e cole no arquivo 5_Test_Endpoint.ipynb substituindo o endereço de exemplo
 28. Execute todos os passos do código 5_Test_Endpoint.ipynb
 29. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
-30. Na pasta ./web_app/js/ abra o arquivo "app.js"
-31. Alterei a constante predictEndpoint e coloque o mesmo endpoint testado no arquivo 5_Test_Endpoint.ipynb no lugar do endereço atual 
+30. Na pasta ./titanic_web_app/js/ abra o arquivo "app.js"
+31. Altere a constante "predictEndpoint" e coloque o mesmo endpoint testado no arquivo 5_Test_Endpoint.ipynb no lugar do endereço atual
+32. Clique em File > New > Terminal e digite o comandos comandos abaixo:
+33. git switch nome_sobrenome (altere e coloque o seu nome)
+33. git rm -rf --cached .
+34. git add .
+35. git commit -m "deploy do melhor modelo"
+36. git config --global --add --bool push.autoSetupRemote true
+37. git push
 
 ## AWS Amplify
 1. Abre o repositório no Github: https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
 2. No canto superior direito, clique em **Fork**
-3. Em "Owner" deixei o seu username e em Repository name deixe o mesmo nome que está.
+3. Em "Owner" deixei o seu username e em "Repository name" deixe o nome que foi preencido como sugestão.
 4. *Desmarque* a opção "Copy the main branch only"
 4. Clique em **Create Fork**
 5. Volte para a AWS e em *Services*, no canto superior esquerdo procure por *AWS Amplify*
