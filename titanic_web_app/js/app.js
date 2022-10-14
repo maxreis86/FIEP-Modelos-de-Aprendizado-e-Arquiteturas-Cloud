@@ -47,7 +47,7 @@ function sendPredictionRequest() {
                 $('#Prob').val('');
                 $('#Rating').val('');
                 $('#Predict').val('');
-                alert('Passenger_id not found');
+                alert('O passageiro não existe');
             },
             complete: function() {
                 $('#ProbLoader').hide();
