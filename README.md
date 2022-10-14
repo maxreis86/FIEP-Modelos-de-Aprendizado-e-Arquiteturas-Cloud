@@ -161,3 +161,8 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 17. Marque a opção: "Allow AWS Amplify to automatically deploy all files hosted in your project root directory"
 18. Clique em Next
 19. Clique em "Save and deploy"
+20. Aguarde a conclusão dos steps Provision, Build, Deploy e Verify
+21. Abra a aplicação titanic_web_app e clique no botão "Predict" para testar o seu modelo
+
+## AWS DynamoDB
+1. Seguir as instruções do arquivos 6_Deploy_Model_DynamoDB.ipynb
