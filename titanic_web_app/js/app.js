@@ -18,8 +18,8 @@ function sendPredictionRequest() {
         {
            type:'GET',
            url: predictEndpoint,
-           data: '&passenger_id=' + $('#passenger_id').val(),
-           // data: '&passenger_id=' + $('#passenger_id').val()  + '&embarked=' + $('#embarked').val(),
+           // data: '&passenger_id=' + $('#passenger_id').val(),
+           data: '&passenger_id=' + $('#passenger_id').val()  + '&embarked=' + $('#embarked').val(),
            success: function(data){
                
                if (data.message == 'Prediction executed successfully!') {
