@@ -52,6 +52,7 @@ functions:
             parameters:
               querystrings:
                 passenger_id: true
+                embarked: true
 plugins:
   - serverless-python-requirements
 custom:
