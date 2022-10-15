@@ -69,3 +69,10 @@ def lambda_handler(event, context):
     }
     
     return response
+
+# DEV
+event={
+    "queryStringParameters":{"passenger_id":"2", "embarked": "Cherbourg"}
+}
+context='context'
+print(lambda_handler(event, context))
