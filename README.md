@@ -173,3 +173,8 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 5. Se apresentar o erro tente descobrir o problema olhando o log da Lambda
 6. Após analisar o erro tente executar novamente tirando o comentário do código "Definição dos inputs para a versão com o DynamoDB"
 7. Parabéns você concluiu mais um deploy com sucesso \o/
+
+## AWS Glue
+1. Antes de começar usar o Glue, vamos entender como o spark funciona. Veja o diagrama abaixo:
+![title](https://docs.cloud.sdu.dk/_images/Spark_Standalone_Cluster.png)
+2. Seguir as instruções do arquivos 7_Deploy_Model_Glue.ipynb
