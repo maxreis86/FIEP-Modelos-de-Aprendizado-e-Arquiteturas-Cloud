@@ -18,8 +18,8 @@ function sendPredictionRequest() {
         {
            type:'GET',
            url: predictEndpoint,
-           data: '&passenger_id=' + $('#passenger_id').val(),
-           // data: '&passenger_id=' + $('#passenger_id').val()  + '&embarked=' + $('#embarked').val(),
+           // data: '&passenger_id=' + $('#passenger_id').val(),
+           data: '&passenger_id=' + $('#passenger_id').val()  + '&embarked=' + $('#embarked').val(),
            success: function(data){
                
                if (data.message == 'Prediction executed successfully!') {
@@ -47,7 +47,7 @@ function sendPredictionRequest() {
                 $('#Prob').val('');
                 $('#Rating').val('');
                 $('#Predict').val('');
-                alert('Passenger_id not found');
+                alert('O passageiro não existe');
             },
             complete: function() {
                 $('#ProbLoader').hide();

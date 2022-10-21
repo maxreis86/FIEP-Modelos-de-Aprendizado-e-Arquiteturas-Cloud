@@ -130,14 +130,15 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 28. Execute todos os passos do código 5_Test_Endpoint.ipynb
 29. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
 30. Na pasta ./titanic_web_app/js/ abra o arquivo "app.js"
-31. Altere a constante "predictEndpoint" e coloque o mesmo endpoint testado no arquivo 5_Test_Endpoint.ipynb no lugar do endereço atual
+31. Altere a constante "predictEndpoint" e coloque o mesmo endpoint testado no arquivo 5_Test_Endpoint.ipynb no lugar do endereço atual, mas deixar o ponto de interrogação no final como nesse exemplo: 'https://5a51rpxvrj.execute-api.us-east-1.amazonaws.com/prod/get-predict?'
 32. Clique em File > New > Terminal e digite o comandos comandos abaixo:
-33. git switch nome_sobrenome (altere e coloque o seu nome)
-33. git rm -rf --cached .
-34. git add .
-35. git commit -m "deploy do melhor modelo"
-36. git config --global --add --bool push.autoSetupRemote true
-37. git push
+33. cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
+34. git switch nome_sobrenome (altere e coloque o seu nome)
+35. git rm -rf --cached .
+36. git add .
+37. git commit -m "deploy do melhor modelo"
+38. git config --global --add --bool push.autoSetupRemote true
+39. git push
 
 ## AWS Amplify
 1. Abre o repositório no Github: https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
@@ -161,3 +162,14 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 17. Marque a opção: "Allow AWS Amplify to automatically deploy all files hosted in your project root directory"
 18. Clique em Next
 19. Clique em "Save and deploy"
+20. Aguarde a conclusão dos steps Provision, Build, Deploy e Verify
+21. Abra a aplicação titanic_web_app e clique no botão "Predict" para testar o seu modelo
+
+## AWS DynamoDB
+1. Seguir as instruções do arquivos 6_Deploy_Model_DynamoDB.ipynb
+2. Depois de executar o código no arquivo 6_Deploy_Model_DynamoDB.ipynb, você vai ter que refazer o deploy do modelo. Para isso você deve seguir novamente as instruções no step "AWS Cloudformation: Deploy usando Serverless", mas tenha atenção porque algumas coisas poidem ser diferentes, pois agora você precisa fazer o deploy do novo código gerado no arquivo 6 ao inves do arquivo 5.
+3. As alterações principais que você precisa fazer serão no arquivo handler.py
+4. Após repetir o deploy faça o teste do endpoint novamente no arquivo 5_Test_Endpoint.ipynb e veja se ficou mais rápido
+5. Se apresentar o erro tente descobrir o problema olhando o log da Lambda
+6. Após analisar o erro tente executar novamente tirando o comentário do código "Definição dos inputs para a versão com o DynamoDB"
+7. Parabéns você concluiu mais um deploy com sucesso \o/

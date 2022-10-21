@@ -1,8 +1,7 @@
 def lambda_handler(event, context):
     import h2o
     import pandas as pd
-    import boto3
-    import awswrangler as wr
+    import boto3    
     import json
     
     #Best Model ID:
@@ -16,16 +15,30 @@ def lambda_handler(event, context):
             return 2
         else:
             return 3
-        
-    #Criar conexão com o Athena
+
+    passenger_id = event['queryStringParameters']['passenger_id']
+    embarked = event['queryStringParameters']['embarked']
+    
+    #Criar conexão com o DynamoDB
     my_boto3_session = boto3.Session(region_name='us-east-1')
     
-    passenger_id = event['queryStringParameters']['passenger_id']
+    titanicTable = my_boto3_session.resource('dynamodb').Table('titanic-propensity-survive').get_item(Key={'passengerid': int(passenger_id)})['Item']
     
-    query = "SELECT * FROM auladeploymodelos.titanic_propensity_survive where passengerid = %s;" % passenger_id
-    dataprep_df = wr.athena.read_sql_query(query, database="auladeploymodelos", boto3_session=my_boto3_session)
+    #Fazer o tratamento do campo embarked para deixar com os valores conhecidos pelo modelo
+    if embarked == "Cherbourg":
+        embarked = "C"
+    elif embarked == "Queenstown":
+        embarked = "Q"
+    elif embarked == "Southampton":
+        embarked = "S"
+        
+    titanicTable['embarked'] = embarked
     
-    predict_df = h2o.mojo_predict_pandas(dataprep_df.set_index('passengerid', inplace=False), mojo_zip_path=BestModelId, genmodel_jar_path='h2o-genmodel.jar', verbose=False).loc[:,('predict','p1')]
+    del titanicTable['referencedate']
+    del titanicTable['passengerid']
+    del titanicTable['partition_0']
+    
+    predict_df = h2o.mojo_predict_pandas(pd.DataFrame(titanicTable, index=[0]).set_index('embarked', inplace=False), mojo_zip_path=BestModelId, genmodel_jar_path='h2o-genmodel.jar', verbose=False).loc[:,('predict','p1')]
             
     def predict_func(predict):
         if predict == 0:
@@ -56,3 +69,10 @@ def lambda_handler(event, context):
     }
     
     return response
+
+# DEV
+event={
+    "queryStringParameters":{"passenger_id":"2", "embarked": "Cherbourg"}
+}
+context='context'
+print(lambda_handler(event, context))
