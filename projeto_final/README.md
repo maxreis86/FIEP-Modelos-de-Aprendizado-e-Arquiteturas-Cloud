@@ -31,3 +31,8 @@ Boa sorte e divirta-se 🚀
 19. git config --global --add --bool push.autoSetupRemote true
 20. git push
 21. Após concluir o curso, você pode excluir todos os recursos da AWS para evitar continuar gerando custos desnecessários
+
+PARABÉNS!!!
+
+Não esqueça de deixar seu feedback por favor. Ele é totalmente anônimo e tem o objetivo de melhorar os próximos módulos:
+[Pesquisa](https://forms.gle/rBPcBuqtg1FUWY57A)
