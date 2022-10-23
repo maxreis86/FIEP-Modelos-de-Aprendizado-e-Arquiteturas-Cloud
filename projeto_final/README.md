@@ -1,6 +1,6 @@
 # Projeto Final
 
-### O projeto final será usado para avaliar seu desempenho no módulo Modelos de Aprendizado e Arquiteturas-Cloud
+### O projeto final será usado para avaliar seu desempenho no módulo "Modelos de Aprendizado e Arquiteturas Cloud"
 
 O projeto será baseado no problema [HR Analytics](https://datahack.analyticsvidhya.com/contest/wns-analytics-hackathon-2018-1/) proposto pela empresa [Analytics Vidhya](https://www.analyticsvidhya.com/)
 
