@@ -30,3 +30,4 @@ Boa sorte e divirta-se 🚀
 18. git commit -m "projeto final seu nome"
 19. git config --global --add --bool push.autoSetupRemote true
 20. git push
+21. Após concluir o curso, você pode excluir todos os recursos da AWS para evitar continuar gerando custos desnecessários
