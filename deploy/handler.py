@@ -6,7 +6,7 @@ def lambda_handler(event, context):
     import json
     
     #Best Model ID:
-    BestModelId='StackedEnsemble_BestOfFamily_4_AutoML_1_20221020_20707.zip'
+    BestModelId='StackedEnsemble_BestOfFamily_4_AutoML_1_20221020_20707.zip' 
     #BestModelId='/home/sagemaker-user/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud/output_model/models/best/StackedEnsemble_BestOfFamily_4_AutoML_1_20221020_20707.zip'
     #Keep the ratings ranges updated
     def ratings(p1):
@@ -23,8 +23,9 @@ def lambda_handler(event, context):
     passenger_id = event['queryStringParameters']['passenger_id']
     
     query = "SELECT * FROM auladeploymodelos.titanic_propensity_survive where passengerid = %s;" % passenger_id
-    dataprep_df = wr.athena.read_sql_query(query, database="auladeploymodelos", boto3_session=my_boto3_session)
-    
+    #dataprep_df = wr.athena.read_sql_query(query, database="auladeploymodelos", boto3_session=my_boto3_session)
+    #dataprep_df = wr.athena.read_sql_query(query, database="auladeploymodelos3", boto3_session=my_boto3_session)
+    dataprep_df = wr.athena.read_sql_query(query, database="aula-deploy-modelos3", boto3_session=my_boto3_session
     predict_df = h2o.mojo_predict_pandas(dataprep_df.set_index('passengerid', inplace=False), mojo_zip_path=BestModelId, genmodel_jar_path='h2o-genmodel.jar', verbose=False).loc[:,('predict','p1')]
             
     def predict_func(predict):
