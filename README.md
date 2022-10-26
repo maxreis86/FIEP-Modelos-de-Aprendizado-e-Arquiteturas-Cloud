@@ -178,3 +178,11 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 1. Antes de começar usar o Glue, vamos entender como o spark funciona. Veja o diagrama abaixo:
 ![title](https://docs.cloud.sdu.dk/_images/Spark_Standalone_Cluster.png)
 2. Seguir as instruções do arquivos 7_Deploy_Model_Glue.ipynb
+
+### Para corrigir problemas de conflito entre branchs no Github
+1. git fetch origin
+2. git merge origin/main
+3. git status
+4. git add .
+5. git commit -m "conflitos corrigidos"
+6. git push
