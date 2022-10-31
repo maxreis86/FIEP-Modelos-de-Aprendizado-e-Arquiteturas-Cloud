@@ -1,4 +1,3 @@
-#professor
 def lambda_handler(event, context):
     import h2o
     import pandas as pd

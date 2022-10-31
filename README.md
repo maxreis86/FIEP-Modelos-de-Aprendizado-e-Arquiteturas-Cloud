@@ -183,6 +183,7 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 1. git fetch origin
 2. git merge origin/main
 3. git status
-4. git add .
-5. git commit -m "conflitos corrigidos"
-6. git push
+4. Analisar todos os arquivos listados em vermelho no git status, localizando, abrindo esses arquivos e procurando pela palavra HEAD onde indica as linhas com conflitos. Analise e corrija os conflitos
+5. git add .
+6. git commit -m "conflitos corrigidos"
+7. git push
