@@ -113,32 +113,34 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 11. git add .
 12. git commit -m "deploy do melhor modelo"
 13. git config --global --add --bool push.autoSetupRemote true
-14. git push
-15. Informe seu usário do Github
-16. Informe seu token pessoal. Se você não tem um token siga esse [passo-a-passo]( https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-17. Se aparecer uma mensagem informando que você não tem acesso, envie uma mensagem para o professor informando seu usuário do github, pois é necessário liberar o seu acesso para gravar nesse repositório 
-18. Vamos recriar uma instância no Cloud9. Para isso repita os passos somente do 1 ao 12 na sessão [Cloud9](https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud#amazon-cloud9)
-19. Agora execute os comandos abaixo
-20. Clonar o repositório do git digitando a linha de comando abaixo no terminal  do Cloud9, mas antes mude nome_sobrenome e coloque seu nome (ec2-user:~/environment $): *git clone --branch nome_sobrenome https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud.git*
-21. Entrar na pasta da aula usando o comando: *cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud/sagemaker-custom-image*
-22. Precisamos aumentar o espaço em disco dessa máquina virtual usando o comando: *bash resize.sh*
-23. cd ..
-24. cd deploy
-25. npm install -g serverless
-26. bash deploy.sh
-27. Copie o endereço do endpoint a partir do http e cole no arquivo 5_Test_Endpoint.ipynb substituindo o endereço de exemplo
-28. Execute todos os passos do código 5_Test_Endpoint.ipynb
-29. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
-30. Na pasta ./titanic_web_app/js/ abra o arquivo "app.js"
-31. Altere a constante "predictEndpoint" e coloque o mesmo endpoint testado no arquivo 5_Test_Endpoint.ipynb no lugar do endereço atual, mas deixar o ponto de interrogação no final como nesse exemplo: 'https://5a51rpxvrj.execute-api.us-east-1.amazonaws.com/prod/get-predict?'
-32. Clique em File > New > Terminal e digite o comandos comandos abaixo:
-33. cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
-34. git switch nome_sobrenome (altere e coloque o seu nome)
-35. git rm -rf --cached .
-36. git add .
-37. git commit -m "deploy do melhor modelo"
-38. git config --global --add --bool push.autoSetupRemote true
-39. git push
+14. git config credential.helper store
+15. git push
+16. Informe seu usário do Github
+17. Informe seu token pessoal. Se você não tem um token siga esse [passo-a-passo]( https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+18. Se aparecer uma mensagem informando que você não tem acesso, envie uma mensagem para o professor informando seu usuário do github, pois é necessário liberar o seu acesso para gravar nesse repositório 
+19. Vamos recriar uma instância no Cloud9. Para isso repita os passos somente do 1 ao 12 na sessão [Cloud9](https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud#amazon-cloud9)
+20. Agora execute os comandos abaixo
+21. Clonar o repositório do git digitando a linha de comando abaixo no terminal  do Cloud9, mas antes mude nome_sobrenome e coloque seu nome (ec2-user:~/environment $): *git clone --branch nome_sobrenome https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud.git*
+22. Entrar na pasta da aula usando o comando: *cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud/sagemaker-custom-image*
+23. Precisamos aumentar o espaço em disco dessa máquina virtual usando o comando: *bash resize.sh*
+24. cd ..
+25. cd deploy
+26. npm install -g serverless
+27. bash deploy.sh
+28. Copie o endereço do endpoint a partir do http e cole no arquivo 5_Test_Endpoint.ipynb substituindo o endereço de exemplo
+29. Execute todos os passos do código 5_Test_Endpoint.ipynb
+30. Se você receber a mensagem "Prediction executed successfully", seu deploy foi concluído com sucesso. Parabéns!!!
+31. Na pasta ./titanic_web_app/js/ abra o arquivo "app.js"
+32. Altere a constante "predictEndpoint" e coloque o mesmo endpoint testado no arquivo 5_Test_Endpoint.ipynb no lugar do endereço atual, mas deixar o ponto de interrogação no final como nesse exemplo: 'https://5a51rpxvrj.execute-api.us-east-1.amazonaws.com/prod/get-predict?'
+33. Clique em File > New > Terminal e digite o comandos comandos abaixo:
+34. cd FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
+35. git switch nome_sobrenome (altere e coloque o seu nome)
+36. git rm -rf --cached .
+37. git add .
+38. git commit -m "deploy do melhor modelo"
+39. git config --global --add --bool push.autoSetupRemote true
+40. git config credential.helper store
+41. git push
 
 ## AWS Amplify
 1. Abre o repositório no Github: https://github.com/maxreis86/FIEP-Modelos-de-Aprendizado-e-Arquiteturas-Cloud
@@ -186,4 +188,5 @@ Ao final de curso você estará apto(a) a desenvolver e implementar um modelo de
 4. Analisar todos os arquivos listados em vermelho no git status, localizando, abrindo esses arquivos e procurando pela palavra HEAD onde indica as linhas com conflitos. Analise e corrija os conflitos
 5. git add .
 6. git commit -m "conflitos corrigidos"
-7. git push
+7. git config credential.helper store
+8. git push
