@@ -1,4 +1,4 @@
-const predictEndpoint = 'https://fn8zs56z3h.execute-api.us-east-1.amazonaws.com/prod/get-predict?';
+const predictEndpoint = 'https://5a51rpxvrj.execute-api.us-east-1.amazonaws.com/prod/get-predict?';
 
 $('#ProbLoader').hide();
 $('#RatingLoader').hide();

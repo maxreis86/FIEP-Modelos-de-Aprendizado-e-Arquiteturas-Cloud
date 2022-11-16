@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     import json
     
     #Best Model ID:
-    BestModelId='./output_model/models/best/StackedEnsemble_BestOfFamily_4_AutoML_1_20221115_210852.zip'
+    BestModelId='StackedEnsemble_BestOfFamily_4_AutoML_1_20221011_230015.zip'
     
     #Keep the ratings ranges updated
     def ratings(p1):
@@ -38,7 +38,7 @@ def lambda_handler(event, context):
     del titanicTable['passengerid']
     del titanicTable['partition_0']
     
-    predict_df = h2o.mojo_predict_pandas(pd.DataFrame(titanicTable, index=[0]).set_index('embarked', inplace=False), mojo_zip_path=BestModelId, genmodel_jar_path='./output_model/models/best/h2o-genmodel.jar', verbose=False).loc[:,('predict','p1')]
+    predict_df = h2o.mojo_predict_pandas(pd.DataFrame(titanicTable, index=[0]).set_index('embarked', inplace=False), mojo_zip_path=BestModelId, genmodel_jar_path='h2o-genmodel.jar', verbose=False).loc[:,('predict','p1')]
             
     def predict_func(predict):
         if predict == 0:
@@ -69,3 +69,10 @@ def lambda_handler(event, context):
     }
     
     return response
+
+# DEV
+event={
+    "queryStringParameters":{"passenger_id":"2", "embarked": "Cherbourg"}
+}
+context='context'
+print(lambda_handler(event, context))
