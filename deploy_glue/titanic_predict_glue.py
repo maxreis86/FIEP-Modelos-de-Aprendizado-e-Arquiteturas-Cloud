@@ -32,15 +32,19 @@ datasource_titanic = glueContext.create_dynamic_frame.from_catalog(database = "a
 #Name
 ModelName = 'titanic_propensity_survive'
 # ATENÇÃO: nome do bucket criado no S3 (altere para o bucket com o seu nome)
-bucketName = 'aula-deploy-modelos-seu-nome'
+bucketName = 'aula-deploy-modelos-william-moreira'
 
 #ATENÇÃO
 #Remover ./output_model/models/best/ da variável PathModelMojo e deixar somente o nome do arquivo .zip
 
+
+
 ############################################ COLAR O CÓDIGO DO DEPLOY SOMENTE ABAIXO DESSA LINHA ###########################
 
+# Após testar esse código, colocar no bloco abaixo, na parte reservada para o seu scritp de deploy
+
 #ModelPath
-PathModelMojo='StackedEnsemble_BestOfFamily_4_AutoML_1_20221011_230015.zip'
+PathModelMojo='StackedEnsemble_BestOfFamily_4_AutoML_1_20221115_210852.zip'
 
 ## Selected Features: variaveis que entraram no modelo
 CAT = [
@@ -95,6 +99,8 @@ rearanged_cols = first_cols + other_cols
 predict_titanic = predict_titanic.select(rearanged_cols)
 
 ############################################# FIM DO BLOCO PARA COLOCAR SEU CÓDIGO #############################################
+
+
 
 ## Salvar no Lakehouse no format parquet
 predict_titanic.write.mode("overwrite").format("parquet").partitionBy('embarked', 'pclass').save('s3://%s/databases/%s' % (bucketName, ModelName+'_spark'))
