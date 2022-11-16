@@ -4,7 +4,7 @@
 #
 # Happy Coding!
 
-service: aula-deploy-modelo
+service: aula-deploy-modelo-william-moreira
 
 provider:
   name: aws
