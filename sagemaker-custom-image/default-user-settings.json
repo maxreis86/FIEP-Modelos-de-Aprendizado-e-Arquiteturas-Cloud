@@ -1,0 +1,15 @@
+{
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": []
+        }, 
+        "SharingSettings": {
+            "S3OutputPath": "s3://sagemaker-studio-245799943033-b6s6sf4u50c/sharing", 
+            "NotebookOutputOption": "Allowed"
+        }, 
+        "ExecutionRole": "arn:aws:iam::245799943033:role/service-role/AmazonSageMaker-ExecutionRole-20210630T160976"
+    }
+}
+
+//aws sagemaker describe-domain --domain-id d-u1ipw8b27b3r
+//aws sagemaker update-domain --domain-id d-u1ipw8b27b3r --cli-input-json file://default-user-settings.json
